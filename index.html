@@ -60,20 +60,20 @@ Trading involves risk and may not be suitable for everyone. This page does not p
 </div>
 
 <script>
-const params = new URLSearchParams(window.location.search);
-const zoneid = params.get('zoneid') || '';
-const country = params.get('country') || '';
-const device = params.get('device') || '';
-const os = params.get('os') || '';
-const lang = params.get('lang') || '';
+const p = new URLSearchParams(window.location.search);
+
+const z = p.get('z') || '';
+const c = p.get('c') || '';
+const l = p.get('l') || '';
+
+const payload = encodeURIComponent(`zone=${z}|country=${c}|lang=${l}`);
 
 document.getElementById("ctaBtn").href =
-"https://track.deriv.com/_LS7aLe_C7YFnhKTx4PKacmNd7ZgqdRLk/365/" +
-"?sub1=" + zoneid +
-"&sub2=" + country +
-"&sub3=" + device +
-"&sub4=" + os +
-"&sub5=" + lang;
+"https://track.deriv.com/_LS7aLe_C7YFnhKTx4PKacmNd7ZgqdRLk/365/"
++ "?sub1=" + encodeURIComponent(z)
++ "&sub2=" + encodeURIComponent(c)
++ "&sub3=" + encodeURIComponent(l)
++ "&payload=" + payload;
 </script>
 
 </body>
