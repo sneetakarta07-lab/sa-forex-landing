@@ -1,79 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Forex Trading Guide for Beginners in South Africa</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Forex Trading in South Africa for Beginners</title>
 
-<style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#e5e7eb}
-.container{max-width:720px;margin:auto;padding:24px}
-h1{color:#38bdf8;font-size:28px}
-p{line-height:1.6}
-ul{padding-left:20px}
-li{margin-bottom:8px}
-.cta{display:inline-block;margin-top:20px;padding:14px 26px;background:#22c55e;color:#000;font-weight:bold;text-decoration:none;border-radius:6px}
-.cta:hover{background:#16a34a}
-.note{font-size:13px;color:#9ca3af;margin-top:25px}
-.badge{background:#020617;padding:12px;border-left:4px solid #38bdf8;margin:20px 0}
-</style>
+  <style>
+    :root{
+      --bg1:#070b18;
+      --bg2:#0b1228;
+      --card:#0b1636;
+      --line:rgba(255,255,255,.10);
+      --text:#e5e7eb;
+      --muted:#a7b0c0;
+      --brand:#38bdf8;
+      --green:#22c55e;
+      --shadow:0 14px 40px rgba(0,0,0,.45);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1100px 520px at 20% -10%, rgba(56,189,248,.20), transparent 60%),
+                  radial-gradient(900px 520px at 90% 10%, rgba(34,197,94,.18), transparent 55%),
+                  linear-gradient(180deg, var(--bg1), var(--bg2));
+    }
+    .wrap{max-width:880px;margin:0 auto;padding:26px 18px 46px}
+    .topbar{
+      display:flex;justify-content:space-between;align-items:center;
+      gap:10px;margin-bottom:14px
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border:1px solid var(--line);
+      border-radius:999px;background:rgba(255,255,255,.04);
+      color:var(--muted);font-size:12px
+    }
+    .pill b{color:#fff;font-weight:700}
+    .hero{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border-radius:calc(var(--radius) + 6px);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .hero-inner{padding:22px 18px}
+    h1{
+      margin:6px 0 10px;
+      font-size:30px;line-height:1.15;
+      letter-spacing:.2px;
+    }
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:15px;line-height:1.55;
+      max-width:72ch;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:26px}
+    }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(2,6,23,.55);
+      border-radius:var(--radius);
+      padding:16px;
+    }
+    .heroimg{
+      width:100%;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.02);
+      box-shadow:0 10px 26px rgba(0,0,0,.40);
+      display:block;
+    }
+    .badge{
+      margin-top:14px;
+      padding:12px 12px;
+      border-left:4px solid var(--brand);
+      border-radius:12px;
+      background: rgba(56,189,248,.10);
+      color:#dbeafe;
+      font-size:13px;
+      line-height:1.5;
+    }
+    .cta{
+      display:flex;align-items:center;justify-content:center;
+      width:100%;
+      margin-top:14px;
+      padding:15px 16px;
+      background: linear-gradient(90deg, var(--green), #34d399);
+      color:#05110a;
+      font-weight:900;
+      text-decoration:none;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.15);
+      box-shadow:0 16px 34px rgba(34,197,94,.18);
+      transition: transform .12s ease, filter .12s ease;
+    }
+    .cta:hover{transform:translateY(-1px);filter:brightness(1.02)}
+    .cta small{margin-left:8px;opacity:.9}
+    .section{margin-top:16px}
+    .section h2{margin:0 0 8px;font-size:16px;color:#dbeafe}
+    ul{margin:10px 0 0;padding-left:18px}
+    li{margin:9px 0;color:var(--text)}
+    .steps{
+      display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;
+      margin-top:10px;
+    }
+    @media (max-width:900px){.steps{grid-template-columns:1fr}}
+    .step{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius:14px;
+      padding:12px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+    .step b{color:#fff}
+    .trust{
+      display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px
+    }
+    @media (max-width:900px){.trust{grid-template-columns:1fr}}
+    .titem{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius:14px;
+      padding:10px 12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .titem b{color:#fff}
+    .footer{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+      opacity:.95;
+    }
+    .divider{height:1px;background:var(--line);margin:14px 0}
+  </style>
 </head>
 
 <body>
-<div class="container">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="pill">🇿🇦 <b>South Africa</b> · Beginner guide</div>
+      <div class="pill">📱 Optimised for <b>Mobile</b></div>
+    </div>
 
-<h1>How Beginners in South Africa Start Forex Trading</h1>
-<div style="text-align:center;">
- <div style="text-align:center; margin:20px 0;">
-  <img src="./trading-mobile.svg"
-       alt="Forex trading on mobile in South Africa"
-       style="max-width:100%; height:auto; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.45);">
-</div>
+    <div class="hero">
+      <div class="hero-inner">
+        <h1>How Beginners in South Africa Start Forex Trading</h1>
+        <p class="sub">
+          A simple, beginner-friendly page to help you review a trading platform and decide if it suits your needs.
+          No hype. No promises. Just a quick guide and a clear next step.
+        </p>
 
-<p>
-Forex trading allows people to exchange global currencies online. Many beginners in South Africa look for platforms that are simple, mobile-friendly, and easy to understand.
-</p>
+        <div class="grid">
+          <div class="card">
+            <!-- اگر آپ کی امیج کا نام different ہے تو یہاں rename کر دیں -->
+            <img class="heroimg" src="./hero-sa.svg" alt="Forex trading on mobile in South Africa" />
 
-<div class="badge">
-<strong>This guide is for educational purposes.</strong><br>
-You can review the platform and decide if it suits your needs.
-</div>
+            <div class="badge">
+              <b>Educational content.</b><br />
+              This page is for information only. You can review the platform and decide if it fits your needs.
+            </div>
 
-<p>Before choosing a trading platform, beginners usually look for:</p>
+            <a id="ctaBtnTop" class="cta" href="#">
+              Check availability in South Africa <small>→</small>
+            </a>
 
-<ul>
-<li>Low starting amount</li>
-<li>Mobile trading on Android phones</li>
-<li>Clear account setup process</li>
-<li>Access for South African users</li>
-</ul>
+            <div class="trust">
+              <div class="titem">✅ <b>Online signup</b><br/>Simple account creation</div>
+              <div class="titem">✅ <b>Mobile access</b><br/>Works on Android phones</div>
+            </div>
+          </div>
 
-<a id="ctaBtn" class="cta" href="#">
-Check if Deriv is available in South Africa
-</a>
+          <div class="card">
+            <div class="section">
+              <h2>What beginners usually look for</h2>
+              <ul>
+                <li>Low starting amount</li>
+                <li>Mobile-friendly platform</li>
+                <li>Clear signup process</li>
+                <li>Access for South African users</li>
+              </ul>
+            </div>
 
-<p class="note">
-Trading involves risk and may not be suitable for everyone. This page does not provide financial advice.
-</p>
+            <div class="divider"></div>
 
-</div>
+            <div class="section">
+              <h2>Before you start</h2>
+              <div class="steps">
+                <div class="step"><b>1) Create an account</b><br/>Takes just a few minutes</div>
+                <div class="step"><b>2) Explore the platform</b><br/>Check markets and tools</div>
+                <div class="step"><b>3) Trade carefully</b><br/>Risk management matters</div>
+              </div>
+            </div>
 
-<script>
-const p = new URLSearchParams(window.location.search);
+            <a id="ctaBtn" class="cta" href="#">
+              Continue to the platform <small>→</small>
+            </a>
 
-const z = p.get('z') || '';
-const c = p.get('c') || '';
-const l = p.get('l') || '';
+            <div class="footer">
+              Trading involves risk and may not be suitable for everyone. This page does not provide financial advice.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-const payload = encodeURIComponent(`zone=${z}|country=${c}|lang=${l}`);
+  <script>
+    // ---- FIXED TRACKING (Propeller + fallback) ----
+    const p = new URLSearchParams(window.location.search);
 
-document.getElementById("ctaBtn").href =
-"https://track.deriv.com/_LS7aLe_C7YFnhKTx4PKacmNd7ZgqdRLk/365/"
-+ "?sub1=" + encodeURIComponent(z)
-+ "&sub2=" + encodeURIComponent(c)
-+ "&sub3=" + encodeURIComponent(l)
-+ "&payload=" + payload;
-</script>
+    // Primary params from Propeller target URL: ?z={zoneid}&c={country}&l={lang}
+    const zRaw = p.get('z') || p.get('zoneid') || '';
+    const cRaw = p.get('c') || p.get('country') || 'ZA';
+    const lRaw = p.get('l') || p.get('lang') || 'en';
 
+    // Clean macros if someone opens with {zoneid} in browser
+    const clean = (v) => {
+      if (!v) return '';
+      if (v.includes('{') || v.includes('}')) return '';
+      return v;
+    };
+
+    const z = clean(zRaw);
+    const c = clean(cRaw) || 'ZA';
+    const l = clean(lRaw) || 'en';
+
+    // Build payload for Deriv Hits log
+    const payload = encodeURIComponent(`zone=${z}|country=${c}|lang=${l}`);
+
+    // ✅ YOUR DERIV TRACKING LINK (same partner link)
+    const base =
+      "https://track.deriv.com/_LS7aLe_C7YFnhKTx4PKacmNd7ZgqdRLk/365/";
+
+    const finalUrl =
+      base +
+      "?sub1=" + encodeURIComponent(z) +
+      "&sub2=" + encodeURIComponent(c) +
+      "&sub3=" + encodeURIComponent(l) +
+      "&payload=" + payload;
+
+    // Apply to both CTA buttons
+    document.getElementById("ctaBtn").href = finalUrl;
+    document.getElementById("ctaBtnTop").href = finalUrl;
+  </script>
+</body>
 </html>
