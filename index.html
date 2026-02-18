@@ -62,9 +62,10 @@ Trading involves risk and may not be suitable for everyone. This page does not p
 <script>
 const p = new URLSearchParams(window.location.search);
 
-const z = p.get('z') || '';
-const c = p.get('c') || '';
-const l = p.get('l') || '';
+// Propeller سے یہ تین values لیں (ہم آسان رکھ رہے ہیں)
+const z = p.get('z') || p.get('zoneid') || '';
+const c = p.get('c') || p.get('country') || '';
+const l = p.get('l') || p.get('lang') || '';
 
 const payload = encodeURIComponent(`zone=${z}|country=${c}|lang=${l}`);
 
